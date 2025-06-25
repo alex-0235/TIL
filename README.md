@@ -1,2 +1,4 @@
 # TIL
-Today | Learned
+
+잘해보자
+
