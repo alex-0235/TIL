@@ -1,0 +1,3 @@
+-- ctrl + Enter
+
+SELECT version();
