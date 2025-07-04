@@ -1,25 +1,12 @@
 -- 19-join-group.sql
 
 USE lecture;
-
-SELECT * FROM sales;
-SELECT * FROM customers;
-
--- 테이블 sales, cstomers에서 customer_id 기준 구매내역이 없는 고객 현황 (Alex 연습)
-SELECT *
-FROM customers
-WHERE customer_id NOT IN (
-    SELECT DISTINCT customer_id
-    FROM sales
-);
-
-------------------------------------------------------------------------------
-USE lecture;
 -- VIP 고객들의 구매 내역 조회 (고객명, 고객유형, 상품명, 카테고리, 주문금액)
 SELECT *
 FROM customers c
 INNER JOIN sales s ON c.customer_id = s.customer_id
 WHERE c.customer_type = 'VIP';
+
 
 -- 각 등급별 구매액 평균
 SELECT
@@ -31,7 +18,6 @@ GROUP BY c.customer_type;
 
 -- 18-JOIN.sql
 -- 고객정보 + 주문정보
-
 USE lecture;
 
 SELECT
